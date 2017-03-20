@@ -15,7 +15,7 @@ import com.sasi.junitlearn.EstimateException;
 import com.sasi.junitlearn.JiraService;
 import com.sasi.junitlearn.StatusConstant;
 
-public class JiraServieCreationTest {
+public class JiraServiceCreationTest {
 
 	private JiraService us; 
 	

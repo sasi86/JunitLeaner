@@ -9,7 +9,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import com.sasi.junitlearn.EstimateException;
@@ -18,9 +17,9 @@ import com.sasi.junitlearn.SubTask;
 
 @RunWith(Parameterized.class)
 public class JiraParameterizedTest {
-	@Parameter(value=0)
+	//@Parameter(value=0)
 	public int input;
-	@Parameter(value=1)
+	//@Parameter(value=1)
 	public int expected;
 	private static JiraService us;
 	
@@ -32,7 +31,8 @@ public class JiraParameterizedTest {
 		us.setTasks(task1);
 		
 	}
-	@Parameters(name="{index} : logWorked({0}) = {1}")
+	//@Parameters(name="{index} : logWorked({0}) = {1}")
+	@Parameters
 	public static List<Object[]> data(){
 		return Arrays.asList(new Object[][]{
 			{1,1},
@@ -40,10 +40,10 @@ public class JiraParameterizedTest {
 		});
 	}
 
-	/*public JiraParameterizedTest(int input,int expected) {
+	public JiraParameterizedTest(int input,int expected) {
 		this.input = input;
 		this.expected = expected;
-	}*/
+	}
 	
 	@Test
 	public void LogWorkedOnSubTask() throws EstimateException{

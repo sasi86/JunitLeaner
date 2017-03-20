@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Categories.class)
 @IncludeCategory(NetagiveCategory.class)
-@Suite.SuiteClasses({JiraServieCreationTest.class})
+@Suite.SuiteClasses({JiraServiceCreationTest.class})
 public class JiraCategorySuite {
 
 }
